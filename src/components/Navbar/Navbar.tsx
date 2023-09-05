@@ -1,19 +1,28 @@
 import styles from "./Navbar.module.css";
 import Logo from "../../assets/NavLogo.png";
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { GoMail } from "react-icons/go";
 import { HiOutlineMenu } from "react-icons/hi";
 import { SlLocationPin } from "react-icons/sl";
-import { IoCloseOutline } from "react-icons/io5";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
 
-  const { app__navbar, nav__center, nav__logo, nav__menu, menu__links, icon__links, btn__cta, nav__smscreen, selected, scaleupcenter } = styles;
+  const { app__navbar, nav__center, nav__logo, nav__menu, menu__links, icon__links, btn__cta, nav__smscreen, selected, menu__open } = styles;
 
   const [ menuToggle, setMenuToggle ] = useState<boolean>(false);
 
   const location = useLocation();
+
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      if (window.scrollY > 200) {
+        setMenuToggle(false);
+      }
+    }, 0);
+
+    return () => {clearInterval(interval);}
+  }, []);
 
   return (
     <nav className={app__navbar}>
@@ -25,7 +34,7 @@ const Navbar = () => {
         </div>
 
         {/* Navigations */}
-        <div className={`${nav__menu} ${menuToggle && scaleupcenter}`}>
+        <div className={`${nav__menu} ${menuToggle && menu__open}`}>
           
           {/* Links */}
           <div className={menu__links}>
@@ -48,10 +57,8 @@ const Navbar = () => {
 
         {/* Small Screen Menu Options */}
         <div className={nav__smscreen}>
-          <button type='button' onClick={() => {setMenuToggle(!menuToggle)}}>
-            {
-              !menuToggle ? <HiOutlineMenu fontSize={28} color="#232323"/> : <IoCloseOutline fontSize={28} color="#232323"/>
-            }
+          <button type='button' className={`${menuToggle && menu__open}`} onClick={() => {setMenuToggle(!menuToggle)}}>
+            <HiOutlineMenu fontSize={28} color={`${menuToggle ? '999999' : '#232323'}`}/>
           </button>
         </div>
 

@@ -19,7 +19,7 @@ const App = () => {
       <div className='app__main'>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/consultation' element={<Consultation/>}/>
+          <Route path='/consultation/:service' element={<Consultation/>}/>
           <Route path='/error' element={<PageNotFound/>}/>
         </Routes>
       </div>
