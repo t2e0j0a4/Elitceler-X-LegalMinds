@@ -2,7 +2,7 @@ import React from 'react'
 
 // Components
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+// import Footer from './components/Footer/Footer';
 
 // Pages
 import Home from './pages/Home/Home';
@@ -19,11 +19,11 @@ const App = () => {
       <div className='app__main'>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/consultation/:name' element={<Consultation/>}/>
+          <Route path='/consultation' element={<Consultation/>}/>
           <Route path='/error' element={<PageNotFound/>}/>
         </Routes>
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
