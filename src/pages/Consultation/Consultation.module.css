@@ -1,1 +1,183 @@
-@import "/src/index.css"
+@import "/src/index.css";
+
+.app__consult {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    background-color: #FFF;
+}
+
+/* Section 1 - Information */
+
+.consult__section1 {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.section1__center {
+    width: 700px;
+    max-width: 100%;
+    height: 100%;
+    padding: 2rem 1rem;
+    margin: 1rem auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.section1__center h1 {
+    font-family: var(--f-p);
+    font-size: 32px;
+    color: #232323;
+    line-height: normal;
+    text-align: center;
+}
+
+.section1__center p {
+    font-family: var(--f-p);
+    width: 94%;
+    text-align: center;
+    font-size: 18px;
+    color: #232323;
+}
+
+/* Section 1 - Information */
+
+/* Section 2 - Form */
+
+.consult__section2 {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    margin: 2rem auto 3rem;
+}
+
+.section2__center {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2__center h2 {
+    font-family: var(--f-p);
+    font-size: 32px;
+    line-height: normal;
+    color: #232323;
+}
+
+.section2__form {
+    width: 600px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    margin-top: 2rem;
+}
+
+.form__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.form__inputs input, .form__inputs select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-family: var(--f-p);
+    font-size: 17px;
+    border: 1px solid #232323;
+    border-radius: 8px;
+    outline: none;
+}
+
+.form__inputs select option {
+    cursor: pointer;
+}
+
+.form__inputs textarea {
+    width: 100%;
+    height: 180px;
+    padding: 0.5rem 1rem;
+    font-size: 15px;
+    resize: vertical;
+    border: 1px solid #232323;
+    border-radius: 8px;
+    font-family: var(--f-p);
+    outline: none;
+}
+
+.section2__form > button {
+    width: 100%;
+    padding: 0.7rem 1.2rem;
+    font-family: var(--f-p);
+    color: var(--c-w);
+    background-color: var(--c-b);
+    border: 1.6px solid var(--c-w);
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    transition: color 0.3s linear, background-color 0.3s linear, border 0.3s linear;
+    cursor: pointer;
+}
+
+.section2__form > button:hover {
+    background-color: var(--c-w);
+    color: var(--c-b);
+    border: 1.6px solid var(--c-b);
+}
+
+/* Section 2 - Form */
+
+/* *************************************************************** */
+
+/* Media Queries */
+
+@media all and (max-width : 500px) {
+    
+    /* Section 1 - Information */
+    
+    .section1__center h1 {
+        font-size: 26px;
+    }
+
+    .section1__center p {
+        font-size: 15px;
+    }
+
+    /* Section 1 - Information */
+
+    /* Section 2 - Form */
+
+    .section2__center h2 {
+        font-size: 26px;
+    }
+
+    .form__inputs input, .form__inputs select, .form__inputs textarea {
+        font-size: 15px;
+        padding: 0.4rem 0.9rem;
+    }
+
+    .section2__form > button {
+        padding: 0.5rem 1rem;
+        font-size: 15px;
+    }
+
+    /* Section 2 - Form */
+    
+}

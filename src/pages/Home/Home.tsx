@@ -31,7 +31,7 @@ const Home = () => {
               {
                 homeShowSeaches.map((item) => {
                   return (
-                    <Link key={item.id} to={`/consultation/${item.queryName}`} className='service__show'>{item.service}</Link>
+                    <Link key={item.id} to={`${item.queryName}`} className='service__show'>{item.service}</Link>
                   )
                 })
               }
@@ -95,7 +95,7 @@ const Home = () => {
               {
                 homeServicesMenu.map((item) => {
                   return (
-                    <Link className={each__service} key={item.id} to={`/consultation/${item.queryName}`}>
+                    <Link className={each__service} key={item.id} to={`${item.queryName}`}>
                       <img src={item.icon} alt={item.service} />
                       <p>{item.service}</p>
                     </Link>

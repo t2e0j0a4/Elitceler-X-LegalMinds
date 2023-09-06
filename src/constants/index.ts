@@ -40,6 +40,12 @@ interface HomeTestimonialsType {
     quoteColor: string
 }
 
+interface ConsultationServicesType {
+    id: number,
+    service: string,
+    information: string
+}
+
 interface HomeTeamType {
     id: number,
     image: string,
@@ -51,32 +57,32 @@ const homeShowSeaches: HomeSearchesType[] = [
     {
         id : 1,
         service : 'Telecommunication',
-        queryName : 'Media-Telecommunication'
+        queryName : '/consultation?service=Media-Telecommunication'
     },
     {
         id : 2,
         service : 'Finance',
-        queryName : 'Banks-And-Finances'
+        queryName : '/consultation?service=Banks-And-Finances'
     },
     {
         id : 3,
         service : 'Nature',
-        queryName : 'Environment-And-Labour-Laws'
+        queryName : '/consultation?service=Environment-And-Labour-Laws'
     },
     {
         id : 4,
         service : 'Criminal Cases',
-        queryName : 'White-Collar-Crimes'
+        queryName : '/consultation?service=White-Collar-Crimes'
     },
     {
         id : 5,
         service : 'Real-estate',
-        queryName : 'Real-Estate'
+        queryName : '/consultation?service=Real-Estate'
     },
     {
         id : 6,
         service : 'Robbery',
-        queryName : 'White-Collar-Crimes'
+        queryName : '/consultation?service=White-Collar-Crimes'
     }
 ];
 
@@ -84,73 +90,73 @@ const homeServicesMenu: HomeServiceType[] = [
     {
         id : 1,
         service : 'Real Estate',
-        queryName : 'Real-Estate',
+        queryName : '/consultation?service=Real-Estate',
         icon : Icon1
     },
     {
         id : 2,
         service : 'Media & Telecomm. Laws',
-        queryName : 'Media-Telecommunication',
+        queryName : '/consultation?service=Media-Telecommunication',
         icon : Icon2
     },
     {
         id : 3,
         service : 'Banking & Finance',
-        queryName : 'Banking-And-Finance',
+        queryName : '/consultation?service=Banks-And-Finances',
         icon : Icon3
     },
     {
         id : 4,
         service : 'Cooperate Law',
-        queryName : 'Cooperate-Law',
+        queryName : '/consultation?service=Cooperate-Law',
         icon : Icon4
     },
     {
         id : 5,
         service : 'Arbritration Law',
-        queryName : 'Arbritation-Law',
+        queryName : '/consultation?service=Arbritation-Law',
         icon : Icon5
     },
     {
         id : 6,
         service : 'Intellectual & Property Law',
-        queryName : 'Intellectual-And-Property-Laws',
+        queryName : '/consultation?service=Intellectual-And-Property-Laws',
         icon : Icon6
     },
     {
         id : 7,
         service : 'Insolvancy Law',
-        queryName : 'Insolvancy-Law',
+        queryName : '/consultation?service=Insolvancy-Law',
         icon : Icon7
     },
     {
         id : 8,
         service : 'Cooperate & Commercial Law',
-        queryName : 'Cooperate-And-Commercial-Law',
+        queryName : '/consultation?service=Cooperate-And-Commercial-Law',
         icon : Icon8
     },
     {
         id : 9,
         service : 'Environment & Labour Laws',
-        queryName : 'Environment-And-Labour-Laws',
+        queryName : '/consultation?service=Environment-And-Labour-Laws',
         icon : Icon9
     },
     {
         id : 10,
         service : 'Privacy & Data Protection',
-        queryName : 'Data-Privacy',
+        queryName : '/consultation?service=Data-Privacy',
         icon : Icon10
     },
     {
         id : 11,
         service : 'Environmental Laws',
-        queryName : 'Environmental-Laws',
+        queryName : '/consultation?service=Environmental-Laws',
         icon : Icon11
     },
     {
         id : 12,
         service : 'White Collar Crimes',
-        queryName : 'White-Collar-Crimes',
+        queryName : '/consultation?service=White-Collar-Crimes',
         icon : Icon12
     },
     
@@ -248,4 +254,67 @@ const homeTeam: HomeTeamType[] = [
     
 ]
 
-export { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam }
+const consultationServices: ConsultationServicesType[] = [
+    {
+        id : 1,
+        service : 'Real Estate',
+        information : 'Real estate Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 2,
+        service : 'Media Telecommunication',
+        information : 'Media Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 3,
+        service : 'Banks And Finances',
+        information : 'Banks Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 4,
+        service : 'Cooperate Law',
+        information : 'Cooperate Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 5,
+        service : 'Arbritation Law',
+        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 6,
+        service : 'Intellectual And Property Laws',
+        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 7,
+        service : 'Insolvancy Law',
+        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 8,
+        service : 'Cooperate And Commercial-Law',
+        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 9,
+        service : 'Environment And Labour Laws',
+        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 10,
+        service : 'Data Privacy',
+        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 11,
+        service : 'Environmental Laws',
+        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+    {
+        id : 12,
+        service : 'White Collar Crimes',
+        information : 'White collar Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+    },
+]
+
+export { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam, consultationServices }
