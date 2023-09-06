@@ -57,7 +57,7 @@ const Consultation = () => {
                     {
                       consultationServices.map((item) => {
                         return (
-                          <option value={item.service.replaceAll('-',' ')}>{item.service.replaceAll('-',' ')}</option>
+                          <option key={item.id} value={item.service.replaceAll('-',' ')}>{item.service.replaceAll('-',' ')}</option>
                         )
                       })
                     }

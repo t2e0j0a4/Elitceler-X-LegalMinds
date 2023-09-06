@@ -98,7 +98,7 @@
 
     .nav__menu {
         position: absolute;
-        width: 300px;
+        width: 280px;
         max-width: 100%;
         height: 100vh;
         top: 0;
@@ -109,7 +109,7 @@
         align-items: center;
         gap: 2rem;
         padding: 2rem 0.6rem;
-        background-color: #f9ecb3;
+        background-color: #232323;
         box-shadow: 4px 0 2px 4px #23232310;
         transition: left 0.3s linear;
         z-index: 9999;
@@ -126,8 +126,16 @@
         gap: 1.4rem;
     }
 
-    .btn__cta {
-        display: none;
+    .menu__links a, .icon__links a {
+        color: #c6c6c6;
+    }
+
+    .menu__links a:nth-child(1):hover, .menu__links a:nth-child(1).selected {
+        color: #fcfcfc;
+    }
+
+    .menu__links a:hover, .icon__links a:hover {
+        color: #fcfcfc;
     }
     
     .nav__smscreen {
