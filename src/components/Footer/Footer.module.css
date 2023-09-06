@@ -1,1 +1,161 @@
-@import "/src/index.css"
+@import "/src/index.css";
+
+.app__footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem 0 0.4rem;
+    height: 100%;
+    background-color: var(--c-b);
+    border-top: 5px solid rgb(124, 124, 124);
+}
+
+.footer__center {
+    width: 1200px;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 2rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.footer__side1 {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.footer__side1 img {
+    width: 200px;
+    height: 100%;
+}
+
+.footer__side1 p {
+    width: 86%;
+    font-family: var(--f-p);
+    font-size: 18px;
+    color: var(--c-w);
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.footer__side2 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.6rem;
+}
+
+.footer__side2 h3 {
+    font-family: var(--f-p);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--c-w);
+}
+
+.side2__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.side2__main li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.side2__main li a {
+    font-family: var(--f-p);
+    font-size: 17px;
+    color: #CCCCCC;
+    transition: color 0.3s ease;
+}
+
+.side2__main li a:hover {
+    color: #FFF;
+}
+
+.copyright {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 1rem;
+    margin: auto;
+    border-top: 2px solid var(--c-p);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright p {
+    font-family: var(--f-p);
+    font-size: 17px;
+    color: rgb(124, 124, 124);
+}
+
+/* Media Queries */
+
+@media all and (max-width : 1024px) {
+
+    .footer__side1, .footer__side2 {
+        width: 50%;
+    }
+    
+    .footer__side1 p {
+        width: 100%;
+    }
+}
+
+@media all and (max-width : 870px) {
+    
+    .footer__center {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__side1, .footer__side2 {
+        width: 100%;
+    }
+
+}
+
+@media all and (max-width : 500px) {
+    
+    .app__footer {
+        padding: 1rem 0;
+    }
+
+    .footer__side1 p {
+        font-size: 16px;
+    }
+
+    .side2__main {
+        gap: 1.2rem;
+    }
+
+    .side2__main li {
+        align-items: flex-start;
+    }
+
+    .side2__main li a {
+        font-size: 16px;
+    }
+}

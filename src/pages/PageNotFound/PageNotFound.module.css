@@ -1,1 +1,52 @@
-@import "/src/index.css"
+@import "/src/index.css";
+
+.app__error {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.error__center {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+    padding: 2rem 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.error__center h1 {
+    font-family: var(--f-p);
+    font-size: 8rem;
+    line-height: normal;
+    color: #232323;
+}
+
+.error__center p {
+    font-family: var(--f-p);
+    color: #232323;
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.error__center a {
+    padding: 0.5rem 1.2rem;
+    font-family: var(--f-p);
+    color: var(--c-w);
+    background-color: var(--c-b);
+    border: 1.6px solid var(--c-w);
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+    transition: color 0.3s linear, background-color 0.3s linear, border 0.3s linear;
+}
+
+.error__center a:hover {
+    background-color: var(--c-w);
+    color: var(--c-b);
+    border: 1.6px solid var(--c-b);
+}
