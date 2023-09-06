@@ -11,7 +11,7 @@
 .home__section1 {
     width: 100%;
     max-width: 100%;
-    height: 100%;
+    min-height: 100vh;
     background-color: var(--c-p);
 }
 
@@ -280,8 +280,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem 7rem;
     flex-wrap: wrap;
+    margin: 1rem auto;
 }
 
 .each__service {
@@ -295,6 +296,15 @@
     flex-direction: column;
     gap: 0.8rem;
     border-radius: 12px;
+    color: var(--c-w);
+    border: 1px solid var(--c-p);
+    transition: all 0.3s linear;
+}
+
+.each__service:hover {
+    background-color: var(--c-w);
+    border: 1px solid var(--c-b);
+    color: var(--c-b);
 }
 
 .each__service img {
@@ -304,8 +314,11 @@
 .each__service p {
     font-family: var(--f-p);
     font-size: 14px;
-    color: var(--c-w);
     text-align: center;
+}
+
+.each__service:hover > p {
+    text-decoration: underline;
 }
 
 /* Section 4 - Why Us & Services */
@@ -672,6 +685,15 @@
 /* Media Queries */
 
 @media all and (max-width : 1020px) {
+
+    /* Section 3 - Why Us & Services */
+
+    .all__services {
+        gap: 2rem;
+    }
+
+    /* Section 3 - Why Us & Services */
+
     /* Section 7 - Our Team */
 
     .section7__main {
@@ -703,6 +725,20 @@
     /* Section 2 - About Us */
 }
 
+@media all and (max-width : 800px) {
+    /* Section 6 - Testimonials */
+
+    .section6__main {
+        justify-content: center;
+    }
+
+    .each__testimonial {
+        width: 320px;
+    }
+
+    /* Section 6 - Testimonials */
+}
+
 @media all and (max-width : 720px) {
 
     /* Section 6 - Testimonials */
@@ -730,6 +766,31 @@
     }
 
     /* Section 6 - Testimonials */
+
+    /* Section 7 - Our Team */
+
+    .section7__main {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1.2rem;
+        flex-wrap: nowrap;
+        padding: 0 1rem;
+        overflow-x: scroll;
+    }
+
+    .section7__main::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .each__member {
+        flex: 0 0 auto;
+        margin: 1rem auto;
+    }
+
+    /* Section 7 - Our Team */
 }
 
 @media all and (max-width: 500px) {
@@ -778,11 +839,11 @@
     /* Section 3 - Why Us & Services */
 
     .all__services {
-        gap: 1rem;
+        gap: 1.2rem;
     }
     
     .each__service {
-        width: 130px;
+        width: 140px;
         height: 160px;
         padding: 1.4rem 0.4rem;
     }
@@ -792,10 +853,7 @@
     }
 
     .each__service p {
-        font-family: var(--f-p);
         font-size: 13px;
-        color: var(--c-w);
-        text-align: center;
     }
 
     /* Section 3 - Why Us & Services */
@@ -828,13 +886,33 @@
         gap: 1rem;
     }
 
+    .each__member {
+        width: 240px;
+    }
+
+    .each__member img {
+        height: 240px;
+    }
+
+    /* Section 6 - Testimonials */
+
+    /* Section 7 - Our Team */
+
+    .section7__center h2 {
+        font-size: 28px;
+    }
+
+    .section7__main {
+        gap: 1rem;
+    }
+
     .each__testimonial {
         flex: 0 0 auto;
         width: 280px;
         margin: 1rem auto;
     }
 
-    /* Section 6 - Testimonials */
+    /* Section 7 - Our Team */
 
     /* Section 8 - Subscribe Letter */
 
@@ -852,4 +930,21 @@
     }
 
     /* Section 8 - Subscribe Letter */
+}
+
+@media all and (max-width : 350px) {
+
+    /* Section 3 - Why Us & Services */
+
+    .all__services {
+        gap: 1rem;
+    }
+    
+    .each__service {
+        width: 130px;
+        height: 156px;
+        padding: 1.4rem 0.4rem;
+    }
+
+    /* Section 3 - Why Us & Services */
 }

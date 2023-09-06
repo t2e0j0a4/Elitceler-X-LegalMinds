@@ -202,7 +202,22 @@ const homeTestimonials: HomeTestimonialsType[] = [
         image : Potrait,
         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
         quoteColor : '#D7ADDB'
-    }   
+    },
+    {
+        id : 5,
+        name : 'John Doe',
+        image : Potrait,
+        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
+        quoteColor : '#A7CA96'
+    },
+    {
+        id : 6,
+        name : 'John Doe',
+        image : Potrait,
+        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
+        quoteColor : '#D7ADDB'
+    },
+    
 ]
 
 const homeTeam: HomeTeamType[] = [
