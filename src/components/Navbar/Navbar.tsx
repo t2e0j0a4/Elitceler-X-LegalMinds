@@ -30,7 +30,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className={nav__logo}>
-          <img src={Logo} alt="Legal Minds" />
+          <Link to='/'><img src={Logo} alt="Legal Minds"/></Link>
         </div>
 
         {/* Navigations */}
@@ -46,8 +46,8 @@ const Navbar = () => {
 
           {/* Icon Links */}
           <div className={icon__links}>
-            <a href="/" target='_blank' rel='noopener noreferrer'><SlLocationPin/></a>
-            <a href="/" target='_blank' rel='noopener noreferrer'><GoMail/></a>
+            <a href="https://goo.gl/maps/p1uknr6jHMYVia1D6" target='_blank' rel='noopener noreferrer'><SlLocationPin/></a>
+            <a href="mailto: indianleagalminds@gmail.com" target='_blank' rel='noopener noreferrer'><GoMail/></a>
           </div>
 
           {/* Constultation Button */}

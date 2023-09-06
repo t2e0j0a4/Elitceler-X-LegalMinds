@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 
 // Components
 import Navbar from './components/Navbar/Navbar';
@@ -10,9 +10,16 @@ import Consultation from './pages/Consultation/Consultation';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 // React Router Dom
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 const App = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({top : 0, behavior : 'smooth'});
+  }, [location]);
+
   return (
     <div className='app'>
       <Navbar/>

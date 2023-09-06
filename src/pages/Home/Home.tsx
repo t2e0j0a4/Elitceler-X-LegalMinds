@@ -39,7 +39,7 @@ const Home = () => {
           </div>
 
           <div className={section1__cta}>
-            <button type='button'>Book a Free Consultation</button>
+            <Link to='/consultation?serviceType=free'>Book a Free Consultation</Link>
             <a href="#services">Our Services</a>
           </div>
 

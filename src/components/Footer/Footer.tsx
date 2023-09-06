@@ -29,15 +29,15 @@ const Footer = () => {
           <ul className={side2__main}>
             <li>
               <MdCall fontSize={24} color='#FFF'/>
-              <a href="/" target='_blank' rel='noopener noreferrer'>+91 9866333316</a>
+              <a href="tel: 919866333316" target='_blank' rel='noopener noreferrer'>+91 9866333316</a>
             </li>
             <li>
               <MdMail fontSize={24} color='#FFF'/>
-              <a href="/" target='_blank' rel='noopener noreferrer'>indianleagalminds@gmail.com</a>
+              <a href="mailto: indianleagalminds@gmail.com" target='_blank' rel='noopener noreferrer'>indianleagalminds@gmail.com</a>
             </li>
             <li>
               <MdLocationPin fontSize={24} color='#FFF'/>
-              <a href="/" target='_blank' rel='noopener noreferrer'>#6-1-69/6, SR Apt. Saifabad, Hyderabad-4, Telangana, India</a>
+              <a href="https://goo.gl/maps/p1uknr6jHMYVia1D6" target='_blank' rel='noopener noreferrer'>#6-1-69/6, SR Apt. Saifabad, Hyderabad-4, Telangana, India</a>
             </li>
           </ul>
         </div>

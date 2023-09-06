@@ -8,7 +8,7 @@ const Consultation = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const service = queryParams.get('service')?.replaceAll('-',' ');
-  console.log(service);
+  const freeConsultation = queryParams.get('serviceType');
 
   const { app__consult, consult__section1, section1__center, consult__section2, section2__center, section2__form, form__inputs } = styles;
 
@@ -30,7 +30,7 @@ const Consultation = () => {
 
       <section className={consult__section1}>
         <div className={section1__center}>
-          <h1>{service ? service + ' Consultation' : 'Book a Service Consultation'}</h1>
+          <h1>{service ? service + ' Consultation' : `Book a ${freeConsultation ? 'Free' : 'Service'} Consultation`}</h1>
           <p>{service ? serviceInfo : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint voluptatem facilis ex quaerat obcaecati quisquam unde ut ipsum debitis culpa eos fugiat aliquid nemo veritatis, quae magnam, veniam natus. Id.'}</p>
         </div>
       </section>
