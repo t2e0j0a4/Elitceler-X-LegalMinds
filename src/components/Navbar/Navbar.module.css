@@ -109,9 +109,10 @@
         align-items: center;
         gap: 2rem;
         padding: 2rem 0.6rem;
-        background-color: var(--c-p);
+        background-color: #f9ecb3;
         box-shadow: 4px 0 2px 4px #23232310;
         transition: left 0.3s linear;
+        z-index: 9999;
     }
 
     .nav__menu.menu__open {
