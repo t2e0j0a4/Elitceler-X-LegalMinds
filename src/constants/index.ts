@@ -36,6 +36,7 @@ interface HomeTestimonialsType {
     id: number,
     image: string,
     name: string,
+    role: string,
     review: string,
     quoteColor: string
 }
@@ -46,11 +47,13 @@ interface ConsultationServicesType {
     information: string
 }
 
+
 interface HomeTeamType {
     id: number,
     image: string,
     name: string,
-    role: string
+    role: string,
+    links: string[]
 }
 
 const homeShowSeaches: HomeSearchesType[] = [
@@ -184,6 +187,7 @@ const homeTestimonials: HomeTestimonialsType[] = [
     {
         id : 1,
         name : 'John Doe',
+        role : 'Designation',
         image : Potrait,
         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
         quoteColor : '#A7CA96'
@@ -191,6 +195,7 @@ const homeTestimonials: HomeTestimonialsType[] = [
     {
         id : 2,
         name : 'John Doe',
+        role : 'Designation',
         image : Potrait,
         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
         quoteColor : '#D7ADDB'
@@ -198,6 +203,7 @@ const homeTestimonials: HomeTestimonialsType[] = [
     {
         id : 3,
         name : 'John Doe',
+        role : 'Designation',
         image : Potrait,
         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor. ',
         quoteColor : '#A7CA96'
@@ -205,6 +211,7 @@ const homeTestimonials: HomeTestimonialsType[] = [
     {
         id : 4,
         name : 'John Doe',
+        role : 'Designation',
         image : Potrait,
         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
         quoteColor : '#D7ADDB'
@@ -212,6 +219,7 @@ const homeTestimonials: HomeTestimonialsType[] = [
     {
         id : 5,
         name : 'John Doe',
+        role : 'Designation',
         image : Potrait,
         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
         quoteColor : '#A7CA96'
@@ -219,6 +227,7 @@ const homeTestimonials: HomeTestimonialsType[] = [
     {
         id : 6,
         name : 'John Doe',
+        role : 'Designation',
         image : Potrait,
         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
         quoteColor : '#D7ADDB'
@@ -231,25 +240,29 @@ const homeTeam: HomeTeamType[] = [
         id : 1,
         name : 'John Doe',
         role : 'Founder',
-        image : Potrait
+        image : Potrait,
+        links : ['', '', '']
     },
     {
         id : 2,
         name : 'John Doe',
         role : 'Senior Attorney',
-        image : Potrait
+        image : Potrait,
+        links : ['', '', '']
     },
     {
         id : 3,
         name : 'John Doe',
-        role : 'JUnior Attorney',
-        image : Potrait
+        role : 'Junior Attorney',
+        image : Potrait,
+        links : ['', '', '']
     },
     {
         id : 4,
         name : 'John Doe',
         role : 'Financial Attorney',
-        image : Potrait
+        image : Potrait,
+        links : ['', '', '']
     },
     
 ]

@@ -5,10 +5,12 @@ import About from "../../assets/homeAbout.svg";
 import { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam } from '../../constants';
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { ImQuotesLeft } from "react-icons/im";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Home = () => {
 
-  const { app__home, home__section1, section1__center, section1__subhead, section1__services, some__popular, section1__cta, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section6, section6__center, section6__main, each__testimonial, testimonial__detail, testimonial__review, home__section7, section7__center, section7__main, each__member, member__details, home__section8, section8__center, section8__main } = styles;
+  const { app__home, home__section1, section1__center, section1__subhead, section1__services, some__popular, section1__cta, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section6, section6__center, section6__main, each__testimonial, testimonial__detail, testimonial__review, home__section7, section7__center, section7__main, each__member, member__details, member__socials, home__section8, section8__center, section8__main } = styles;
 
   const [ currentFAQ, setCurrentFAQ ] = useState<number>(1);
 
@@ -159,6 +161,7 @@ const Home = () => {
                     <div className={testimonial__detail}>
                       <img src={item.image} alt={item.name}/>
                       <p>{item.name}</p>
+                      <p>{item.role}</p>
                     </div>
 
                     <div className={testimonial__review}>
@@ -192,6 +195,17 @@ const Home = () => {
                     <div className={member__details}>
                       <h5>{member.name}</h5>
                       <p>{member.role}</p>
+                      <div className={member__socials}>
+                        <a href={member.links[0]} target='_blank' rel='noopener noreferrer'>
+                          <FaTwitter fontSize={20} color='#121212'/>
+                        </a>
+                        <a href={member.links[1]} target='_blank' rel='noopener noreferrer'>
+                          <FaLinkedin fontSize={20} color='#121212'/>
+                        </a>
+                        <a href={member.links[2]} target='_blank' rel='noopener noreferrer'>
+                          <BiLogoGmail fontSize={20} color='#121212'/>
+                        </a>
+                      </div>
                     </div>
                   </div>
                   )
