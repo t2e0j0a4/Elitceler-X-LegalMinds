@@ -1,8 +1,12 @@
-import React from 'react'
+import { useEffect } from 'react'
 import styles from "./PageNotFound.module.css";
 import { Link } from "react-router-dom";
 
 const PageNotFound = () => {
+
+  useEffect(() => {
+    document.title = "Page Not Found | Legal Minds";
+  }, []);
 
   const { app__error, error__center } = styles;
 

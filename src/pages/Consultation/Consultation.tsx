@@ -23,6 +23,10 @@ const Consultation = () => {
     })
   }, [service]);
 
+  useEffect(() => {
+    document.title = "Consultation | Legal Minds";
+  }, []);
+
   return (
     <main className={app__consult}>
 

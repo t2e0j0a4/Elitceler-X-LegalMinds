@@ -1,18 +1,44 @@
-import React, { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import About from "../../assets/homeAbout.svg";
-import { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam } from '../../constants';
+
+// React Icons
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { ImQuotesLeft } from "react-icons/im";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
+import { BiSolidHandDown } from "react-icons/bi";
+
+// Constants
+import { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam } from '../../constants';
+
+// Countup
+import CountUp from 'react-countup';
 
 const Home = () => {
 
-  const { app__home, home__section1, section1__center, section1__subhead, section1__services, some__popular, section1__cta, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section6, section6__center, section6__main, each__testimonial, testimonial__detail, testimonial__review, home__section7, section7__center, section7__main, each__member, member__details, member__socials, home__section8, section8__center, section8__main } = styles;
+  useEffect(() => {
+    document.title = "Legal Minds | Home";
+  }, []);
+
+  const { app__home, home__section1, section1__overlay, section1__center, section1__subhead, section1__services, some__popular, section1__cta, service__icon, section1__stats, stats, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section6, section6__center, section6__main, each__testimonial, testimonial__detail, testimonial__review, home__section7, section7__center, section7__main, each__member, member__details, member__socials, home__section8, section8__center, section8__main } = styles;
 
   const [ currentFAQ, setCurrentFAQ ] = useState<number>(1);
+
+  const [ statsLocation, setStatsLocation ] = useState<boolean>(false);
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+      if (window.scrollY > 120) {
+        setStatsLocation(true);
+      } 
+    }, 0);
+
+    return () => {clearInterval(interval)}
+
+  }, []);
 
   return (
     <main className={app__home}>
@@ -20,11 +46,12 @@ const Home = () => {
       {/* Section 1 - Search Service */}
 
       <section className={home__section1}>
+        <div className={section1__overlay}/>
         <div className={section1__center}>
 
           <div className={section1__subhead}>
-            <h2>Tag Line Here</h2>
-            <p>Any Other Sentence</p>
+            <h2>Welcome to Legal Minds</h2>
+            <p>We believe in the power of justice to transform lives. As a dedicated team of legal professionals, we are committed to providing exceptional legal services tailored to meet your unique needs.</p>
           </div>
 
           <div className={section1__services}>
@@ -42,10 +69,18 @@ const Home = () => {
 
           <div className={section1__cta}>
             <Link to='/consultation?serviceType=free'>Book a Free Consultation</Link>
-            <a href="#services">Our Services</a>
+            <a href="#services">Our Services <BiSolidHandDown fontSize={18} className={service__icon}/></a>
           </div>
 
         </div>
+
+        <div className={section1__stats}>
+          <div className={stats}><span>{
+            statsLocation ? <CountUp start={1} end={147} duration={5}/> : 147}</span><p>Defended</p></div>
+          <div className={stats}><span>{
+            statsLocation ? <CountUp start={1} end={97} duration={5}/> : 97}%</span><p>Sucess Ratio</p></div>
+        </div>
+
       </section>
 
       {/* Section 1 - Search Service */}
