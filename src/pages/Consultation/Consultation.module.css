@@ -142,6 +142,13 @@
     border: 1.6px solid var(--c-b);
 }
 
+.consult__response {
+    text-align: center;
+    font-size: 17px;
+    font-family: var(--f-p);
+    color: #232323;
+}
+
 /* Section 2 - Form */
 
 /* *************************************************************** */

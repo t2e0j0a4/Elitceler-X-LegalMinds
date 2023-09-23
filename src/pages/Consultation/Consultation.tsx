@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 import styles from "./Consultation.module.css";
 import { consultationServices } from '../../constants';
+
+// Emailjs
+import emailjs from "@emailjs/browser";
 
 const Consultation = () => {
 
@@ -9,14 +12,13 @@ const Consultation = () => {
   const queryParams = new URLSearchParams(location.search);
   const service = queryParams.get('service')?.replaceAll('-',' ');
 
-  const { app__consult, consult__section1, section1__center, consult__section2, section2__center, section2__form, form__inputs } = styles;
+  const { app__consult, consult__section1, section1__center, consult__section2, section2__center, section2__form, form__inputs, consult__response } = styles;
 
   const [serviceInfo, setServiceInfo] = useState<string>('');
 
   useEffect(() => {
     consultationServices.forEach((item) => {
       if (item.service === service) {
-        console.log(item.service, service);
         setServiceInfo(item.information);
       }
     })
@@ -25,6 +27,33 @@ const Consultation = () => {
   useEffect(() => {
     document.title = "Consultation | Legal Minds";
   }, []);
+
+  const consultForm = useRef<HTMLFormElement | null>(null);
+  const [ showConsultFormResponse, setShowConsultFormResponse ] = useState<boolean>(false);
+  const [ consultResponse, setConsultResponse ] = useState<string>('');
+
+  const handleConsultForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    emailjs.sendForm('service_9vhwcvc', 'legalminds_2004', consultForm.current as HTMLFormElement, 'm3HMEpwZdRvxIANbK')
+    .then((result) => {
+        setShowConsultFormResponse(true);
+        setConsultResponse('Got your Consultation, Reach you soon!');
+        setTimeout(() => {
+          setShowConsultFormResponse(false);
+          setConsultResponse("");
+          window.location.reload();
+        }, 5000);
+    }, (error) => {
+        setShowConsultFormResponse(true);
+        setConsultResponse(error.text);
+        setTimeout(() => {
+          setShowConsultFormResponse(false);
+          setConsultResponse("");
+          window.location.reload();
+        }, 5000);
+    });
+  };
+
 
   return (
     <main className={app__consult}>
@@ -53,14 +82,14 @@ const Consultation = () => {
         <div className={section2__center}>
           <h2>Get Consultation</h2>
 
-          <form className={section2__form}>
+          <form className={section2__form} ref={consultForm} onSubmit={handleConsultForm}>
             <div className={form__inputs}>
-              <input required type="text" name="consult_name" placeholder="Enter your Name*"/>
-              <input required type="email" name="consult_email" placeholder="Enter your Email*"/>
+              <input required type="text" name="name" placeholder="Enter your Name*"/>
+              <input required type="email" name="email" placeholder="Enter your Email*"/>
               {service ? (
-                <input required type="text" readOnly name="consult_service" value={service}/>
+                <input required type="text" readOnly name="service" value={service}/>
               ) : (
-                <select required name="consult_service">
+                <select required name="service">
                   {consultationServices.map((item) => {
                     return (
                       <option key={item.id} value={item.service.replaceAll("-", " ")}>
@@ -71,10 +100,13 @@ const Consultation = () => {
                 </select>
               )}
               <textarea
-                name="consult_message"
+                name="message"
                 placeholder="Write about your Consultation"
               ></textarea>
             </div>
+            {
+              showConsultFormResponse && <p className={consult__response}>{consultResponse}</p>
+            }
             <button type='submit'>Submit</button>
           </form>
 
