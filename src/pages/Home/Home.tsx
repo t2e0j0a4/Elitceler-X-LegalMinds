@@ -8,13 +8,16 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { ImQuotesLeft } from "react-icons/im";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
-import { BiSolidHandDown } from "react-icons/bi";
+import { BiChevronDown } from "react-icons/bi";
 
 // Constants
 import { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam } from '../../constants';
 
 // Countup
 import CountUp from 'react-countup';
+
+// React Calendly
+import { PopupButton } from "react-calendly";
 
 const Home = () => {
 
@@ -68,8 +71,8 @@ const Home = () => {
           </div>
 
           <div className={section1__cta}>
-            <Link to='/consultation?serviceType=free'>Book a Free Consultation</Link>
-            <a href="#services">Our Services <BiSolidHandDown fontSize={18} className={service__icon}/></a>
+            <PopupButton url="https://calendly.com/t2e0j0a4/serviceconsultation" rootElement={document.querySelector('#root') as HTMLElement} text="Book a Free Consultation"/>
+            <a href="#services">Our Services <BiChevronDown fontSize={18} className={service__icon}/></a>
           </div>
 
         </div>
