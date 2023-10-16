@@ -1,47 +1,38 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import styles from "./Home.module.css";
-import { Link } from "react-router-dom";
 import About from "../../assets/homeAbout.svg";
 
 // React Icons
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { ImQuotesLeft } from "react-icons/im";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
 
 // Constants
-import { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam } from '../../constants';
-
-// Countup
-import CountUp from 'react-countup';
+import { homeShowSeaches, homeServicesMenu, homeFAQ, homeTeam } from '../../constants';
 
 // React Calendly
 import { PopupButton } from "react-calendly";
 
 const Home = () => {
 
-  useEffect(() => {
-    document.title = "Legal Minds | Home";
-  }, []);
-
-  const { app__home, home__section1, section1__overlay, section1__center, section1__subhead, section1__services, some__popular, section1__cta, service__icon, section1__stats, stats, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section6, section6__center, section6__main, each__testimonial, testimonial__detail, testimonial__review, home__section7, section7__center, section7__main, each__member, member__details, member__socials, home__section8, section8__center, section8__main } = styles;
+  const { app__home, home__section1, section1__overlay, section1__center, section1__subhead, section1__services, some__popular, section1__cta, service__icon, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section7, section7__center, section7__main, each__member, member__details, member__socials } = styles;
 
   const [ currentFAQ, setCurrentFAQ ] = useState<number>(1);
 
-  const [ statsLocation, setStatsLocation ] = useState<boolean>(false);
+  // const [ statsLocation, setStatsLocation ] = useState<boolean>(false);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    const interval = setInterval(() => {
-      if (window.scrollY > 120) {
-        setStatsLocation(true);
-      } 
-    }, 0);
+  //   const interval = setInterval(() => {
+  //     if (window.scrollY > 120) {
+  //       setStatsLocation(true);
+  //     } 
+  //   }, 0);
 
-    return () => {clearInterval(interval)}
+  //   return () => {clearInterval(interval)}
 
-  }, []);
+  // }, []);
 
   return (
     <main className={app__home}>
@@ -63,7 +54,7 @@ const Home = () => {
               {
                 homeShowSeaches.map((item) => {
                   return (
-                    <Link key={item.id} to={`${item.queryName}`} className='service__show'>{item.service}</Link>
+                    <button type='button' key={item.id} className='service__show'>{item.service}</button>
                   )
                 })
               }
@@ -77,12 +68,12 @@ const Home = () => {
 
         </div>
 
-        <div className={section1__stats}>
+        {/* <div className={section1__stats}>
           <div className={stats}><span>{
             statsLocation ? <CountUp start={1} end={147} duration={5}/> : 147}</span><p>Defended</p></div>
           <div className={stats}><span>{
             statsLocation ? <CountUp start={1} end={97} duration={5}/> : 97}%</span><p>Sucess Ratio</p></div>
-        </div>
+        </div> */}
 
       </section>
 
@@ -135,10 +126,10 @@ const Home = () => {
               {
                 homeServicesMenu.map((item) => {
                   return (
-                    <Link className={each__service} key={item.id} to={`${item.queryName}`}>
+                    <button type='button' className={each__service} key={item.id}>
                       <img src={item.icon} alt={item.service} />
                       <p>{item.service}</p>
-                    </Link>
+                    </button>
                   )
                 })
               }
@@ -185,7 +176,7 @@ const Home = () => {
 
       {/* Section 6 - Testimonials */}
 
-      <section className={home__section6}>
+      {/* <section className={home__section6}>
         <div className={section6__center}>
 
           <h2>Testimonials</h2>
@@ -213,7 +204,7 @@ const Home = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* Section 6 - Testimonials */}
 
@@ -222,7 +213,7 @@ const Home = () => {
       <section className={home__section7}>
         <div className={section7__center}>
 
-          <h2>Our Team</h2>
+          <h2>Founder</h2>
 
           <div className={section7__main}>
             {
@@ -232,7 +223,6 @@ const Home = () => {
                     <img src={member.image} alt={member.name} />
                     <div className={member__details}>
                       <h5>{member.name}</h5>
-                      <p>{member.role}</p>
                       <div className={member__socials}>
                         <a href={member.links[0]} target='_blank' rel='noopener noreferrer'>
                           <FaTwitter fontSize={20} color='#121212'/>
@@ -258,7 +248,7 @@ const Home = () => {
 
       {/* Section 8 - Subscribe to Newsletter */}
 
-      <section className={home__section8}>
+      {/* <section className={home__section8}>
         <div className={section8__center}>
 
           <h2>Subscribe Now</h2>
@@ -269,7 +259,7 @@ const Home = () => {
           </form>
 
         </div>
-      </section>
+      </section> */}
 
       {/* Section 8 - Subscribe to Newsletter */}
 
@@ -278,3 +268,7 @@ const Home = () => {
 }
 
 export default Home
+
+// home__section8, section8__center, section8__main
+// home__section6, section6__center, section6__main, each__testimonial, testimonial__detail, testimonial__review
+// section1__stats, stats

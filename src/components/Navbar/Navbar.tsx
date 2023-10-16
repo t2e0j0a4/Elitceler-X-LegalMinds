@@ -8,7 +8,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
 
-  const { app__navbar, nav__center, nav__logo, nav__menu, menu__links, icon__links, btn__cta, nav__smscreen, selected, menu__open } = styles;
+  const { app__navbar, nav__center, nav__logo, nav__menu, menu__links, icon__links, nav__smscreen, selected, menu__open } = styles;
 
   const [ menuToggle, setMenuToggle ] = useState<boolean>(false);
 
@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
 
           {/* Constultation Button */}
-          <Link to='/consultation' className={btn__cta}>Book a Consultation</Link>
+          {/* <Link to='/consultation' className={btn__cta}>Book a Consultation</Link> */}
 
         </div>
 
@@ -68,3 +68,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+// btn__cta

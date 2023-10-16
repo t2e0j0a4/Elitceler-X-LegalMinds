@@ -7,7 +7,7 @@ import Icon6 from "../assets/Intellectual.svg";
 import Icon7 from "../assets/Insolvancy.svg";
 import Icon8 from "../assets/Commercial.svg";
 import Icon9 from "../assets/Environment.svg";
-import Icon10 from "../assets/Privacy.svg";
+// import Icon10 from "../assets/Privacy.svg";
 import Icon11 from "../assets/EnvironmentalLaws.svg";
 import Icon12 from "../assets/WhiteCollar.svg";
 
@@ -16,14 +16,14 @@ import Potrait from "../assets/Potrait.svg";
 interface HomeSearchesType {
     id: number,
     service: string,
-    queryName: string
+    // queryName: string
 }
 
 interface HomeServiceType {
     id: number,
     service: string,
-    queryName: string,
     icon: string
+    // queryName: string,
 }
 
 interface HomeFAQType {
@@ -52,115 +52,126 @@ interface HomeTeamType {
     id: number,
     image: string,
     name: string,
-    role: string,
     links: string[]
 }
 
 const homeShowSeaches: HomeSearchesType[] = [
     {
         id : 1,
-        service : 'Telecommunication',
-        queryName : '/consultation?service=Media-Telecommunication'
+        service : 'Civil Cases',
+        // queryName : '/consultation?service=Media-Telecommunication'
     },
     {
         id : 2,
-        service : 'Finance',
-        queryName : '/consultation?service=Banks-And-Finances'
+        service : 'Finances',
+        // queryName : '/consultation?service=Banks-And-Finances'
     },
     {
         id : 3,
-        service : 'Nature',
-        queryName : '/consultation?service=Environment-And-Labour-Laws'
+        service : 'Nature & Envrionment',
+        // queryName : '/consultation?service=Environment-And-Labour-Laws'
     },
     {
         id : 4,
         service : 'Criminal Cases',
-        queryName : '/consultation?service=White-Collar-Crimes'
+        // queryName : '/consultation?service=White-Collar-Crimes'
     },
     {
         id : 5,
-        service : 'Real-estate',
-        queryName : '/consultation?service=Real-Estate'
+        service : 'Real Estate',
+        // queryName : '/consultation?service=Real-Estate'
     },
     {
         id : 6,
         service : 'Robbery',
-        queryName : '/consultation?service=White-Collar-Crimes'
+        // queryName : '/consultation?service=White-Collar-Crimes'
     }
 ];
 
 const homeServicesMenu: HomeServiceType[] = [
     {
         id : 1,
-        service : 'Real Estate',
-        queryName : '/consultation?service=Real-Estate',
-        icon : Icon1
+        service : 'Criminal Law',
+        icon : Icon12,
+        // queryName : '/consultation?service=Real-Estate',
+        // Icon12
     },
     {
         id : 2,
-        service : 'Media & Telecomm. Laws',
-        queryName : '/consultation?service=Media-Telecommunication',
-        icon : Icon2
+        service : 'Civil Law',
+        icon : Icon4,
+        // queryName : '/consultation?service=Media-Telecommunication',
+        // Icon4
     },
     {
         id : 3,
-        service : 'Banking & Finance',
-        queryName : '/consultation?service=Banks-And-Finances',
-        icon : Icon3
+        service : 'Real Estate Law',
+        icon : Icon1,
+        // queryName : '/consultation?service=Banks-And-Finances',
+        // Icon1
     },
     {
         id : 4,
-        service : 'Cooperate Law',
-        queryName : '/consultation?service=Cooperate-Law',
-        icon : Icon4
+        service : 'Labour Law',
+        icon : Icon9,
+        // queryName : '/consultation?service=Cooperate-Law',
+        // Icon9
     },
     {
         id : 5,
-        service : 'Arbritration Law',
-        queryName : '/consultation?service=Arbritation-Law',
-        icon : Icon5
+        service : 'Banking Law',
+        icon : Icon3,
+        // queryName : '/consultation?service=White-Collar-Crimes',
+        // Icon3
     },
     {
         id : 6,
-        service : 'Intellectual & Property Law',
-        queryName : '/consultation?service=Intellectual-And-Property-Laws',
-        icon : Icon6
+        service : 'Arbritration Law',
+        icon : Icon6,
+        // queryName : '/consultation?service=Arbritation-Law',
+        // Icon6
     },
     {
         id : 7,
-        service : 'Insolvancy Law',
-        queryName : '/consultation?service=Insolvancy-Law',
-        icon : Icon7
+        service : 'DRT & NCLT Law',
+        icon : Icon7,
+        // queryName : '/consultation?service=Intellectual-And-Property-Laws',
+        // Icon7
     },
     {
         id : 8,
-        service : 'Cooperate & Commercial Law',
-        queryName : '/consultation?service=Cooperate-And-Commercial-Law',
-        icon : Icon8
+        service : 'Immigration Law',
+        icon : Icon5,
+        // queryName : '/consultation?service=Insolvancy-Law',
+        // Icon5
     },
     {
         id : 9,
-        service : 'Environment & Labour Laws',
-        queryName : '/consultation?service=Environment-And-Labour-Laws',
-        icon : Icon9
+        service : 'Media & Telecom Law',
+        icon : Icon2,
+        // queryName : '/consultation?service=Cooperate-And-Commercial-Law',
+        // Icon2
     },
     {
         id : 10,
-        service : 'Privacy & Data Protection',
-        queryName : '/consultation?service=Data-Privacy',
-        icon : Icon10
+        service : 'Consumer Law',
+        icon : Icon8,
+        // queryName : '/consultation?service=Environment-And-Labour-Laws',
+        // Icon8
     },
     {
         id : 11,
-        service : 'Environmental Laws',
-        queryName : '/consultation?service=Environmental-Laws',
-        icon : Icon11
+        service : 'Family Law',
+        icon : Icon11,
+        // queryName : '/consultation?service=Data-Privacy',
+        // Icon11
     },
     {
         id : 12,
-        service : 'White Collar Crimes',
-        queryName : '/consultation?service=White-Collar-Crimes',
-        icon : Icon12
+        service : 'Bankrupcty Laws',
+        icon : Icon3,
+        // queryName : '/consultation?service=Environmental-Laws',
+        // Icon3
     },
     
 ]
@@ -239,32 +250,9 @@ const homeTeam: HomeTeamType[] = [
     {
         id : 1,
         name : 'John Doe',
-        role : 'Founder',
         image : Potrait,
         links : ['', '', '']
-    },
-    {
-        id : 2,
-        name : 'John Doe',
-        role : 'Senior Attorney',
-        image : Potrait,
-        links : ['', '', '']
-    },
-    {
-        id : 3,
-        name : 'John Doe',
-        role : 'Junior Attorney',
-        image : Potrait,
-        links : ['', '', '']
-    },
-    {
-        id : 4,
-        name : 'John Doe',
-        role : 'Financial Attorney',
-        image : Potrait,
-        links : ['', '', '']
-    },
-    
+    }
 ]
 
 const consultationServices: ConsultationServicesType[] = [
