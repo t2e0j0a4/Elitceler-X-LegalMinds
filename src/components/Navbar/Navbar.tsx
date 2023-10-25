@@ -46,15 +46,15 @@ const Navbar = () => {
 
           {/* Icon Links */}
           <div className={icon__links}>
-            <a href="https://goo.gl/maps/p1uknr6jHMYVia1D6" target='_blank' rel='noopener noreferrer'><SlLocationPin/></a>
-            <a href="mailto: indianleagalminds@gmail.com" target='_blank' rel='noopener noreferrer'><GoMail/></a>
+            <a title="Location" href="https://goo.gl/maps/p1uknr6jHMYVia1D6" target='_blank' rel='noopener noreferrer'><SlLocationPin aria-label="Location"/></a>
+            <a title="Mail" href="mailto: indianleagalminds@gmail.com" target='_blank' rel='noopener noreferrer'><GoMail aria-label="Mail"/></a>
           </div>
 
         </div>
 
         {/* Small Screen Menu Options */}
         <div className={nav__smscreen}>
-          <button type='button' className={`${menuToggle && menu__open}`} onClick={() => {setMenuToggle(!menuToggle)}}>
+          <button aria-label="Menu" type='button' className={`${menuToggle && menu__open}`} onClick={() => {setMenuToggle(!menuToggle)}}>
             <HiOutlineMenu fontSize={28} color={`${menuToggle ? '999999' : '#232323'}`}/>
           </button>
         </div>

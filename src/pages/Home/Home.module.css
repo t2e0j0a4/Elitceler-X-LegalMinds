@@ -90,14 +90,13 @@
 }
 
 .section1__services h3 {
-    color: #ddd;
+    color: #ffffff;
     text-align: center;
     font-family: var(--f-p);
-    font-size: 16px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    text-decoration: underline;
 }
 
 .some__popular {
@@ -119,6 +118,10 @@
     background-color: rgba(28, 28, 28, 0.05);
     border-radius: 24px;
     border: 1px solid #fff;
+}
+
+.some__popular > *:focus-visible {    
+    outline: 2px solid #fefefefa;
 }
 
 .section1__cta {
@@ -153,6 +156,12 @@
     color: #232323;
     background-color: #ffffff;
     border: 1px solid #ffffff;
+}
+
+.section1__cta > *:focus-visible {
+    outline: 2px solid #c69912;
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .service__icon {
@@ -383,9 +392,11 @@
     transition: all 0.3s linear;
 }
 
-.each__service:hover {
+.each__service:hover, .each__service:focus-visible {
     background-color: var(--c-w);
     border: 1px solid var(--c-b);
+    outline: 2px solid var(--c-b);
+    text-decoration: underline;
     color: var(--c-b);
 }
 
@@ -467,6 +478,11 @@
     transition: color 0.3s linear, background-color 0.3s linear;
 }
 
+.faq__question:focus-visible {
+    outline: 2px solid #424242fa;
+    border-radius: 4px;
+}
+
 .faq__question.open__answer {
     background-color: #232323;
     color: #FFFFFF;
@@ -476,10 +492,11 @@
     font-family: var(--f-p);
     font-size: 17px;
     font-weight: 500;
+    text-align: left;
     width: 100%;
 }
 
-.faq__question button {
+.faq__question span {
     background-color: transparent;
     outline: none;
     border: none;
@@ -487,7 +504,7 @@
     transition: transform 0.3s linear;
 }
 
-.faq__question button.open__answer {
+.faq__question span.open__answer {
     transform: rotate(-180deg);
 }
 
@@ -707,6 +724,18 @@
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
+}
+
+.member__socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member__socials a:focus-visible {
+    outline: 2px solid #424242fa;
+    border-radius: 4px;
+    outline-offset: 4px;
 }
 
 /* Section 7 - Our Team */

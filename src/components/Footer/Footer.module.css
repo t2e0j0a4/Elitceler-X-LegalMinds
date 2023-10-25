@@ -49,6 +49,12 @@
     gap: 1rem;
 }
 
+.socials a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer__side2 {
     width: 40%;
     display: flex;
@@ -90,6 +96,13 @@
 
 .side2__main li a:hover {
     color: #FFF;
+}
+
+
+.socials a:focus-visible, .side2__main li a:focus-visible {
+    outline: 2px solid #d5d5d5fa;
+    outline-offset: 5px;
+    border-radius: 4px;
 }
 
 .copyright {

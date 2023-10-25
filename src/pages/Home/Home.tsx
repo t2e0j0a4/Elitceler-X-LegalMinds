@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styles from "./Home.module.css";
 import About from "../../assets/homeAbout.svg";
 
@@ -20,6 +20,10 @@ const Home = () => {
   const { app__home, home__section1, section1__overlay, section1__center, section1__subhead, section1__services, some__popular, section1__cta, service__icon, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section7, section7__center, section7__main, each__member, member__details, member__socials } = styles;
 
   const [ currentFAQ, setCurrentFAQ ] = useState<number>(1);
+
+  useEffect(() => {
+    document.title = "Home | Legal Minds";
+  }, []);
 
   return (
     <main className={app__home}>
@@ -50,7 +54,7 @@ const Home = () => {
 
           <div className={section1__cta}>
             <PopupButton url="https://calendly.com/t2e0j0a4/serviceconsultation" rootElement={document.querySelector('#root') as HTMLElement} text="Book a Free Consultation"/>
-            <a href="#services">Our Services <BiChevronDown fontSize={18} className={service__icon}/></a>
+            <a href="#services">Our Services <BiChevronDown aria-label="Down" fontSize={18} className={service__icon}/></a>
           </div>
 
         </div>
@@ -134,10 +138,10 @@ const Home = () => {
                 return (
                   <div key={item.id} className={each__faq}>
 
-                    <div className={`${faq__question} ${currentFAQ === item.id && open__answer}`} onClick={() => {setCurrentFAQ(item.id === currentFAQ ? 0 : item.id)}}>
+                    <button type='button' tabIndex={0} aria-label={currentFAQ === item.id ? 'Hide' : 'Show'} className={`${faq__question} ${currentFAQ === item.id && open__answer}`} onClick={() => {setCurrentFAQ(item.id === currentFAQ ? 0 : item.id)}}>
                       <p>{item.id}. {item.query}</p>
-                      <button onClick={() => {setCurrentFAQ(item.id)}} className={`${currentFAQ === item.id && open__answer}`} type='button'><MdKeyboardArrowDown fontSize={26} color={`${currentFAQ === item.id ? '#FFFFFF' : '#232323'}`} /></button>
-                    </div>
+                      <span aria-hidden title={currentFAQ === item.id ? 'Hide' : 'Show'} className={`${currentFAQ === item.id && open__answer}`}><MdKeyboardArrowDown fontSize={26} color={`${currentFAQ === item.id ? '#FFFFFF' : '#232323'}`} aria-hidden /></span>
+                    </button>
 
                     <div className={`${faq__answer} ${currentFAQ === item.id && open__answer}`}>
                       <p>{item.answer}</p>
@@ -204,14 +208,14 @@ const Home = () => {
                     <div className={member__details}>
                       <h5>{member.name}</h5>
                       <div className={member__socials}>
-                        <a href={member.links[0]} target='_blank' rel='noopener noreferrer'>
-                          <FaTwitter fontSize={20} color='#121212'/>
+                        <a href={member.links[0]} title='Twitter' target='_blank' rel='noopener noreferrer'>
+                          <FaTwitter aria-label='Twitter' fontSize={20} color='#121212'/>
                         </a>
-                        <a href={member.links[1]} target='_blank' rel='noopener noreferrer'>
-                          <FaLinkedin fontSize={20} color='#121212'/>
+                        <a href={member.links[1]} title='Linkedin' target='_blank' rel='noopener noreferrer'>
+                          <FaLinkedin aria-label='Linkedin' fontSize={20} color='#121212'/>
                         </a>
-                        <a href={member.links[2]} target='_blank' rel='noopener noreferrer'>
-                          <BiLogoGmail fontSize={20} color='#121212'/>
+                        <a href={member.links[2]} title='Gmail' target='_blank' rel='noopener noreferrer'>
+                          <BiLogoGmail aria-label='Gmail' fontSize={20} color='#121212'/>
                         </a>
                       </div>
                     </div>
