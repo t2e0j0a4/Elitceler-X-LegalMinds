@@ -138,9 +138,9 @@ const Home = () => {
                 return (
                   <div key={item.id} className={each__faq}>
 
-                    <button type='button' tabIndex={0} aria-label={currentFAQ === item.id ? 'Hide' : 'Show'} className={`${faq__question} ${currentFAQ === item.id && open__answer}`} onClick={() => {setCurrentFAQ(item.id === currentFAQ ? 0 : item.id)}}>
+                    <button type='button' tabIndex={0} aria-label={`${item.id}. ${item.query}`} className={`${faq__question} ${currentFAQ === item.id && open__answer}`} onClick={() => {setCurrentFAQ(item.id === currentFAQ ? 0 : item.id)}}>
                       <p>{item.id}. {item.query}</p>
-                      <span aria-hidden title={currentFAQ === item.id ? 'Hide' : 'Show'} className={`${currentFAQ === item.id && open__answer}`}><MdKeyboardArrowDown fontSize={26} color={`${currentFAQ === item.id ? '#FFFFFF' : '#232323'}`} aria-hidden /></span>
+                      <span aria-hidden className={`${currentFAQ === item.id && open__answer}`}><MdKeyboardArrowDown fontSize={26} color={`${currentFAQ === item.id ? '#FFFFFF' : '#232323'}`} aria-hidden /></span>
                     </button>
 
                     <div className={`${faq__answer} ${currentFAQ === item.id && open__answer}`}>
@@ -206,7 +206,7 @@ const Home = () => {
                   <div key={member.id} className={each__member}>
                     <img src={member.image} alt={member.name} />
                     <div className={member__details}>
-                      <h5>{member.name}</h5>
+                      <p>{member.name}</p>
                       <div className={member__socials}>
                         <a href={member.links[0]} title='Twitter' target='_blank' rel='noopener noreferrer'>
                           <FaTwitter aria-label='Twitter' fontSize={20} color='#121212'/>

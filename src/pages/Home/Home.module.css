@@ -698,21 +698,12 @@
     gap: 0.4rem;
 }
 
-.member__details h5 {
+.member__details p {
     color: #232323;
     font-family: var(--f-p);
     font-size: 18px;
     font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-
-.member__details p {
-    color: #636363;
-    font-family: var(--f-p);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
 }
 
