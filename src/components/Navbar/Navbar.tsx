@@ -50,9 +50,6 @@ const Navbar = () => {
             <a href="mailto: indianleagalminds@gmail.com" target='_blank' rel='noopener noreferrer'><GoMail/></a>
           </div>
 
-          {/* Constultation Button */}
-          {/* <Link to='/consultation' className={btn__cta}>Book a Consultation</Link> */}
-
         </div>
 
         {/* Small Screen Menu Options */}
