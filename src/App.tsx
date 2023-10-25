@@ -11,6 +11,7 @@ import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 // React Router Dom
 import { Routes, Route, useLocation } from "react-router-dom";
+import Consultation from './pages/Consultation/Consultation';
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
       <div className='app__main'>
         <Routes>
           <Route path='/' element={<Home/>}/>
+          <Route path='/consultation' element={<Consultation/>}/>
           <Route path='*' element={<PageNotFound/>}/>
         </Routes>
       </div>

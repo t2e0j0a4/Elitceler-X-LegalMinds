@@ -7,7 +7,6 @@ import Icon6 from "../assets/Intellectual.svg";
 import Icon7 from "../assets/Insolvancy.svg";
 import Icon8 from "../assets/Commercial.svg";
 import Icon9 from "../assets/Environment.svg";
-// import Icon10 from "../assets/Privacy.svg";
 import Icon11 from "../assets/EnvironmentalLaws.svg";
 import Icon12 from "../assets/WhiteCollar.svg";
 
@@ -16,14 +15,14 @@ import Potrait from "../assets/Potrait.svg";
 interface HomeSearchesType {
     id: number,
     service: string,
-    // queryName: string
+    queryName: string
 }
 
 interface HomeServiceType {
     id: number,
     service: string,
     icon: string
-    // queryName: string,
+    queryName: string,
 }
 
 interface HomeFAQType {
@@ -32,14 +31,14 @@ interface HomeFAQType {
     answer: string
 }
 
-interface HomeTestimonialsType {
-    id: number,
-    image: string,
-    name: string,
-    role: string,
-    review: string,
-    quoteColor: string
-}
+// interface HomeTestimonialsType {
+//     id: number,
+//     image: string,
+//     name: string,
+//     role: string,
+//     review: string,
+//     quoteColor: string
+// }
 
 interface ConsultationServicesType {
     id: number,
@@ -59,32 +58,32 @@ const homeShowSeaches: HomeSearchesType[] = [
     {
         id : 1,
         service : 'Civil Cases',
-        // queryName : '/consultation?service=Media-Telecommunication'
+        queryName : '/consultation?service=Civil-Law'
     },
     {
         id : 2,
         service : 'Finances',
-        // queryName : '/consultation?service=Banks-And-Finances'
+        queryName : '/consultation?service=Banking-Law'
     },
     {
         id : 3,
         service : 'Nature & Envrionment',
-        // queryName : '/consultation?service=Environment-And-Labour-Laws'
+        queryName : '/consultation?service=Labour-Law'
     },
     {
         id : 4,
         service : 'Criminal Cases',
-        // queryName : '/consultation?service=White-Collar-Crimes'
+        queryName : '/consultation?service=Criminal-Law'
     },
     {
         id : 5,
         service : 'Real Estate',
-        // queryName : '/consultation?service=Real-Estate'
+        queryName : '/consultation?service=Real-Estate-Law'
     },
     {
         id : 6,
         service : 'Robbery',
-        // queryName : '/consultation?service=White-Collar-Crimes'
+        queryName : '/consultation?service=Criminal-Law'
     }
 ];
 
@@ -93,85 +92,73 @@ const homeServicesMenu: HomeServiceType[] = [
         id : 1,
         service : 'Criminal Law',
         icon : Icon12,
-        // queryName : '/consultation?service=Real-Estate',
-        // Icon12
+        queryName : '/consultation?service=Criminal-Law',
     },
     {
         id : 2,
         service : 'Civil Law',
         icon : Icon4,
-        // queryName : '/consultation?service=Media-Telecommunication',
-        // Icon4
+        queryName : '/consultation?service=Civil-Law',
     },
     {
         id : 3,
         service : 'Real Estate Law',
         icon : Icon1,
-        // queryName : '/consultation?service=Banks-And-Finances',
-        // Icon1
+        queryName : '/consultation?service=Real-Estate-Law',
     },
     {
         id : 4,
         service : 'Labour Law',
         icon : Icon9,
-        // queryName : '/consultation?service=Cooperate-Law',
-        // Icon9
+        queryName : '/consultation?service=Labour-Law',
     },
     {
         id : 5,
         service : 'Banking Law',
         icon : Icon3,
-        // queryName : '/consultation?service=White-Collar-Crimes',
-        // Icon3
+        queryName : '/consultation?service=Banking-Law',
     },
     {
         id : 6,
         service : 'Arbritration Law',
         icon : Icon6,
-        // queryName : '/consultation?service=Arbritation-Law',
-        // Icon6
+        queryName : '/consultation?service=Arbritation-Law',
     },
     {
         id : 7,
         service : 'DRT & NCLT Law',
         icon : Icon7,
-        // queryName : '/consultation?service=Intellectual-And-Property-Laws',
-        // Icon7
+        queryName : '/consultation?service=DRT-NCLT-Law',
     },
     {
         id : 8,
         service : 'Immigration Law',
         icon : Icon5,
-        // queryName : '/consultation?service=Insolvancy-Law',
-        // Icon5
+        queryName : '/consultation?service=Immigration-Law',
     },
     {
         id : 9,
         service : 'Media & Telecom Law',
         icon : Icon2,
-        // queryName : '/consultation?service=Cooperate-And-Commercial-Law',
-        // Icon2
+        queryName : '/consultation?service=Media-Telcommunication-Law',
     },
     {
         id : 10,
         service : 'Consumer Law',
         icon : Icon8,
-        // queryName : '/consultation?service=Environment-And-Labour-Laws',
-        // Icon8
+        queryName : '/consultation?service=Consumer-Law',
     },
     {
         id : 11,
         service : 'Family Law',
         icon : Icon11,
-        // queryName : '/consultation?service=Data-Privacy',
-        // Icon11
+        queryName : '/consultation?service=Family-Law',
     },
     {
         id : 12,
         service : 'Bankrupcty Laws',
         icon : Icon3,
-        // queryName : '/consultation?service=Environmental-Laws',
-        // Icon3
+        queryName : '/consultation?service=Bankrupcty-Law',
     },
     
 ]
@@ -194,57 +181,57 @@ const homeFAQ: HomeFAQType[] = [
     },
 ]
 
-const homeTestimonials: HomeTestimonialsType[] = [
-    {
-        id : 1,
-        name : 'John Doe',
-        role : 'Designation',
-        image : Potrait,
-        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
-        quoteColor : '#A7CA96'
-    },
-    {
-        id : 2,
-        name : 'John Doe',
-        role : 'Designation',
-        image : Potrait,
-        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
-        quoteColor : '#D7ADDB'
-    },
-    {
-        id : 3,
-        name : 'John Doe',
-        role : 'Designation',
-        image : Potrait,
-        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor. ',
-        quoteColor : '#A7CA96'
-    },
-    {
-        id : 4,
-        name : 'John Doe',
-        role : 'Designation',
-        image : Potrait,
-        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
-        quoteColor : '#D7ADDB'
-    },
-    {
-        id : 5,
-        name : 'John Doe',
-        role : 'Designation',
-        image : Potrait,
-        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
-        quoteColor : '#A7CA96'
-    },
-    {
-        id : 6,
-        name : 'John Doe',
-        role : 'Designation',
-        image : Potrait,
-        review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
-        quoteColor : '#D7ADDB'
-    },
+// const homeTestimonials: HomeTestimonialsType[] = [
+//     {
+//         id : 1,
+//         name : 'John Doe',
+//         role : 'Designation',
+//         image : Potrait,
+//         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
+//         quoteColor : '#A7CA96'
+//     },
+//     {
+//         id : 2,
+//         name : 'John Doe',
+//         role : 'Designation',
+//         image : Potrait,
+//         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
+//         quoteColor : '#D7ADDB'
+//     },
+//     {
+//         id : 3,
+//         name : 'John Doe',
+//         role : 'Designation',
+//         image : Potrait,
+//         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor. ',
+//         quoteColor : '#A7CA96'
+//     },
+//     {
+//         id : 4,
+//         name : 'John Doe',
+//         role : 'Designation',
+//         image : Potrait,
+//         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
+//         quoteColor : '#D7ADDB'
+//     },
+//     {
+//         id : 5,
+//         name : 'John Doe',
+//         role : 'Designation',
+//         image : Potrait,
+//         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
+//         quoteColor : '#A7CA96'
+//     },
+//     {
+//         id : 6,
+//         name : 'John Doe',
+//         role : 'Designation',
+//         image : Potrait,
+//         review : 'Lorum Ipsum dolor sit amer Lorum Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor sit amer Lorem Ipsum dolor.',
+//         quoteColor : '#D7ADDB'
+//     },
     
-]
+// ]
 
 const homeTeam: HomeTeamType[] = [
     {
@@ -258,64 +245,9 @@ const homeTeam: HomeTeamType[] = [
 const consultationServices: ConsultationServicesType[] = [
     {
         id : 1,
-        service : 'Real Estate',
+        service : 'Real Estate Law',
         information : 'Real estate Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 2,
-        service : 'Media Telecommunication',
-        information : 'Media Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 3,
-        service : 'Banks And Finances',
-        information : 'Banks Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 4,
-        service : 'Cooperate Law',
-        information : 'Cooperate Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 5,
-        service : 'Arbritation Law',
-        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 6,
-        service : 'Intellectual And Property Laws',
-        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 7,
-        service : 'Insolvancy Law',
-        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 8,
-        service : 'Cooperate And Commercial-Law',
-        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 9,
-        service : 'Environment And Labour Laws',
-        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 10,
-        service : 'Data Privacy',
-        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 11,
-        service : 'Environmental Laws',
-        information : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
-    },
-    {
-        id : 12,
-        service : 'White Collar Crimes',
-        information : 'White collar Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
     },
 ]
 
-export { homeShowSeaches, homeServicesMenu, homeFAQ, homeTestimonials, homeTeam, consultationServices }
+export { homeShowSeaches, homeServicesMenu, homeFAQ, homeTeam, consultationServices }

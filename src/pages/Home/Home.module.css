@@ -111,7 +111,7 @@
     flex-wrap: wrap;
 }
 
-.some__popular button {
+.some__popular a {
     padding: 0.5rem 0.8rem;
     font-family: var(--f-p);
     font-size: 14px;
