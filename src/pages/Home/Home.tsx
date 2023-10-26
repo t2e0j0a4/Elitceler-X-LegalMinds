@@ -53,7 +53,7 @@ const Home = () => {
           </div>
 
           <div className={section1__cta}>
-            <PopupButton url="https://calendly.com/t2e0j0a4/serviceconsultation" rootElement={document.querySelector('#root') as HTMLElement} text="Book a Free Consultation"/>
+            <PopupButton url="https://calendly.com/indianlegalminds/free-service-consultation" rootElement={document.querySelector('#root') as HTMLElement} text="Book a Free Consultation"/>
             <a href="#services">Our Services <BiChevronDown aria-label="Down" fontSize={18} className={service__icon}/></a>
           </div>
 
@@ -73,7 +73,7 @@ const Home = () => {
           <div className={section2__main}>
             <img src={About} alt="Legal Minds" />
             <div className={section2__about}>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>Legal Minds is your partner in navigating the legal landscape, providing expert advice and practical solutions for your unique needs.</p>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ const Home = () => {
 
             <h2>Why Us ?</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p>Legal Minds is your partner in navigating the legal landscape, providing expert advice and practical solutions for your unique needs.</p>
           </div>
 
           {/* Services */}

@@ -120,9 +120,9 @@ const homeServicesMenu: HomeServiceType[] = [
     },
     {
         id : 6,
-        service : 'Arbritration Law',
+        service : 'Arbitration Law',
         icon : Icon6,
-        queryName : '/consultation?service=Arbritation-Law',
+        queryName : '/consultation?service=Arbitration-Law',
     },
     {
         id : 7,
@@ -246,8 +246,29 @@ const consultationServices: ConsultationServicesType[] = [
     {
         id : 1,
         service : 'Real Estate Law',
-        information : 'Real estate Veniam hic eveniet facilis modi! Cum, dolorem. Modi, aliquam reiciendis nisi vero perferendis voluptates illum, vel eaque aspernatur officia architecto dolorem? Porro perspiciatis exercitationem, hic dicta inventore sint.'
+        information : 'At Legal Minds, we are experts in Indian land laws, offering seamless solutions throughout the real estate asset lifecycle. We provide counsel on title due diligence, transactions, construction contracts, and more, serving landowners, developers, and investors with a deep understanding of local regulatory issues.'
     },
+    {
+        id : 2,
+        service : 'Media & Telecom Law',
+        information : 'Our founder, Mr. Silveri Srishailam, is well-connected in the media world, making us your go-to advisors for regulatory, policy, and compliance matters. We handle everything from broadcasting contracts to telecom policy issues, representing clients before regulatory bodies and the Supreme Court.'
+    },
+    {
+        id : 3,
+        service : 'Banking Law',
+        information : 'With diverse expertise and experience, our team offers innovative and compliant financing solutions. We understand the intricacies of Indian banking and financial regulations and can provide practical advice backed by a deep understanding of the sector.'
+    },
+    {
+        id : 4,
+        service : 'Arbitration Law',
+        information : 'Our dispute resolution team handles litigation, arbitration, and pre-dispute advisory services. We represent clients across various forums, offering strategic guidance on arbitration, litigation, and international matters involving Indian laws.'
+    },
+    {
+        id : 5,
+        service : 'Criminal Law',
+        information : 'Our team is well-versed in criminal investigations and proceedings related to white-collar crime. We offer expert guidance on anti-bribery laws, data privacy, and corporate compliance, both in the preventative and prosecution stages.'
+    },
+    
 ]
 
 export { homeShowSeaches, homeServicesMenu, homeFAQ, homeTeam, consultationServices }

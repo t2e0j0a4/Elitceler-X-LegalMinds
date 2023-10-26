@@ -3,13 +3,16 @@ import { useLocation } from 'react-router-dom';
 import styles from "./Consultation.module.css";
 import { consultationServices } from '../../constants';
 
+// React-Calendly
+import { InlineWidget } from "react-calendly";
+
 const Consultation = () => {
 
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const service = queryParams.get('service')?.replaceAll('-',' ');
 
-  const { app__consult, consult__section1, section1__center } = styles;
+  const { app__consult, consult__section1, section1__center, consult__section2 } = styles;
 
   const [serviceInfo, setServiceInfo] = useState<string>('');
 
@@ -33,12 +36,20 @@ const Consultation = () => {
 
       <section className={consult__section1}>
         <article className={section1__center}>
-          <h1>{service ? service + " Consultation" : `Book a Service Consultation`}</h1>
-          <p>{service ? serviceInfo : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint voluptatem facilis ex quaerat obcaecati quisquam unde ut ipsum debitis culpa eos fugiat aliquid nemo veritatis, quae magnam, veniam natus. Id."}</p>
+          <h1>{service + " Consultation"}</h1>
+          <p>{serviceInfo ? serviceInfo : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nisi laborum doloribus aut similique voluptas tenetur veritatis blanditiis quasi ratione obcaecati laboriosam quam non rerum, minus suscipit debitis necessitatibus."}</p>
         </article>
       </section>
 
       {/* Section 1 - Service/Normal Info */}
+      
+      {/* Section 2 - Calendly Integration */}
+
+      <section className={consult__section2}>
+        <InlineWidget styles={{ minWidth : '320px', width : '100%', height: '700px' }}  url='https://calendly.com/indianlegalminds/service-consultation' />
+      </section>
+
+      {/* Section 2 - Calendly Integration */}
 
     </main>
   );
