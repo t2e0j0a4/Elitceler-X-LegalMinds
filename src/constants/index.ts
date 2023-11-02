@@ -10,7 +10,7 @@ import Icon9 from "../assets/Environment.svg";
 import Icon11 from "../assets/EnvironmentalLaws.svg";
 import Icon12 from "../assets/WhiteCollar.svg";
 
-import Potrait from "../assets/Potrait.svg";
+import founderImg from "../assets/Srishailam.png";
 
 interface HomeSearchesType {
     id: number,
@@ -236,9 +236,9 @@ const homeFAQ: HomeFAQType[] = [
 const homeTeam: HomeTeamType[] = [
     {
         id : 1,
-        name : 'John Doe',
-        image : Potrait,
-        links : ['', '', '']
+        name : 'Silveri Srishailam',
+        image : founderImg,
+        links : ['', '', 'indianlegalminds@gmail.com']
     }
 ]
 

@@ -214,7 +214,7 @@ const Home = () => {
                         <a href={member.links[1]} title='Linkedin' target='_blank' rel='noopener noreferrer'>
                           <FaLinkedin aria-label='Linkedin' fontSize={20} color='#121212'/>
                         </a>
-                        <a href={member.links[2]} title='Gmail' target='_blank' rel='noopener noreferrer'>
+                        <a href={`mailto: ${member.links[2]}`} title='Gmail' target='_blank' rel='noopener noreferrer'>
                           <BiLogoGmail aria-label='Gmail' fontSize={20} color='#121212'/>
                         </a>
                       </div>
