@@ -6,12 +6,11 @@ import Footer from './components/Footer/Footer';
 
 // Pages
 import Home from './pages/Home/Home';
-// import Consultation from './pages/Consultation/Consultation';
+import Consultation from './pages/Consultation/Consultation';
 import PageNotFound from './pages/PageNotFound/PageNotFound';
 
 // React Router Dom
 import { Routes, Route, useLocation } from "react-router-dom";
-import Consultation from './pages/Consultation/Consultation';
 
 const App = () => {
 

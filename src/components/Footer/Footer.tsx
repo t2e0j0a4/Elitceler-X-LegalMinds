@@ -1,12 +1,13 @@
 import React from 'react'
 import styles from "./Footer.module.css";
 import FootLogo from "../../assets/FootLogo.png";
-import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
 import { MdCall, MdMail, MdLocationPin } from "react-icons/md";
+import { BsFacebook, BsTwitter, BsLinkedin } from "react-icons/bs";
+import Elitceler from "../../assets/Elitceler.svg";
 
 const Footer = () => {
 
-  const { app__footer, footer__center, footer__side1, socials, footer__side2, side2__main, copyright } = styles;
+  const { app__footer, footer__center, footer__side1, socials, footer__side2, side2__main, elitceler__mention, copyright } = styles;
 
   return (
     <footer className={app__footer}>
@@ -42,6 +43,11 @@ const Footer = () => {
           </ul>
         </div>
 
+      </div>
+
+      <div className={elitceler__mention}>
+        Developed by <a href="https://elitceler.com/" target='_blank' rel='noopener noreferrer'>Elitceler Technologies</a>
+        <img src={Elitceler} alt="Elitceler" />
       </div>
 
       <div className={copyright}>
