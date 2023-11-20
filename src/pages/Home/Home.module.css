@@ -269,22 +269,23 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--c-p);
 }
 
 .section2__main img {
-    width: 60%;
+    width: 45%;
     height: 100%;
+    object-fit: cover;
 }
 
 .section2__about {
-    width: 100%;
+    width: 55%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 1rem;
     padding: 1rem 2rem;
@@ -294,7 +295,7 @@
     width: 100%;
     height: 100%;
     text-align: left;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-family: var(--f-p);
     margin: auto;
 }
@@ -847,7 +848,12 @@
     }
 
     .section2__about {
+        width: 100%;
         padding: 2rem 1rem;
+    }
+
+    .section2__about p {
+        text-align: center;
     }
 
     /* Section 2 - About Us */
