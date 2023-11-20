@@ -141,7 +141,7 @@
     font-size: 17px;
     text-align: center;
     border-radius: 8px;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     color: var(--c-b);
     background-color: #FFFBEF;
     border : 1px solid #FFFBEF;
@@ -155,13 +155,11 @@
 .section1__cta a:hover, .section1__cta button:hover {
     color: #232323;
     background-color: #ffffff;
-    border: 1px solid #ffffff;
 }
 
 .section1__cta > *:focus-visible {
-    outline: 2px solid #c69912;
-    outline-offset: 4px;
-    border-radius: 4px;
+    background-color: #c69912;
+    color: #000000;
 }
 
 .service__icon {
