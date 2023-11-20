@@ -73,7 +73,9 @@ const Home = () => {
           <div className={section2__main}>
             <img src={About} alt="Legal Minds" />
             <div className={section2__about}>
-              <p>Legal Minds is your partner in navigating the legal landscape, providing expert advice and practical solutions for your unique needs.</p>
+              <p>Legal minds are a group of advocates and auditors. Proficientness, experience, creativity, and integrity are the personas that we bring to every matter we handle. Through our knowledge, experience, and expertise, we offer our clients the most efficient, strategic, and cost-effective representation in everything from the simplest to the most complex civil litigation.</p>
+              <p>We ranked it highly for its client-satisfaction ethos. The firm takes great pride in its client servicing approach focused on clarity, accessibility, high responsiveness, and business-oriented legal advice.</p>
+              <p>We represent clients in all Indian and international courts in a wide variety of matters, including criminal, civil, and corporate litigation, taxation, immigration, property title verification, legal opinion, product liability, construction defect, breach of contract, professional liability, employment litigation, insurance coverage, and paralegal trainings for developmental organizations and civil society.</p>
             </div>
           </div>
 
