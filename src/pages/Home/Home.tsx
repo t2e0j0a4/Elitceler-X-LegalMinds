@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from "./Home.module.css";
 import About from "../../assets/homeAbout.svg";
 
@@ -15,15 +15,25 @@ import { homeShowSeaches, homeServicesMenu, homeFAQ, homeTeam } from '../../cons
 import { PopupButton } from "react-calendly";
 import { Link } from 'react-router-dom';
 
+
 const Home = () => {
 
-  const { app__home, home__section1, section1__overlay, section1__center, section1__subhead, section1__services, some__popular, section1__cta, service__icon, home__section2, section2__center, section2__main, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section7, section7__center, section7__main, each__member, member__details, member__socials } = styles;
+  const { app__home, home__section1, section1__overlay, section1__center, section1__subhead, section1__services, some__popular, section1__cta, service__icon, home__section2, section2__center, section2__main, img__load, img__loaded, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section7, section7__center, section7__main, each__member, member__details, member__socials } = styles;
+
+  // Image Loading
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [imgLoaded, setImageLoaded] = useState<boolean>(false);
 
   const [ currentFAQ, setCurrentFAQ ] = useState<number>(1);
 
   useEffect(() => {
-    document.title = "Home | Legal Minds";
+    document.title = 'Home | LegalMinds';
   }, []);
+
+  useEffect(() => {
+    imgRef.current?.complete && setImageLoaded(true);
+  }, [imgRef]);
+
 
   return (
     <main className={app__home}>
@@ -71,11 +81,13 @@ const Home = () => {
           <h2>About Us</h2>
 
           <div className={section2__main}>
-            <img src={About} alt="Legal Minds" />
+            <div className={img__load}>
+              <img src={About} className={`${imgLoaded && img__loaded}`} alt="Legal Minds" ref={imgRef} onLoad={() => {setImageLoaded(true)}} />
+            </div>
             <div className={section2__about}>
-              <p>Legal minds are a group of advocates and auditors. Proficientness, experience, creativity, and integrity are the personas that we bring to every matter we handle. Through our knowledge, experience, and expertise, we offer our clients the most efficient, strategic, and cost-effective representation in everything from the simplest to the most complex civil litigation.</p>
-              <p>We ranked it highly for its client-satisfaction ethos. The firm takes great pride in its client servicing approach focused on clarity, accessibility, high responsiveness, and business-oriented legal advice.</p>
-              <p>We represent clients in all Indian and international courts in a wide variety of matters, including criminal, civil, and corporate litigation, taxation, immigration, property title verification, legal opinion, product liability, construction defect, breach of contract, professional liability, employment litigation, insurance coverage, and paralegal trainings for developmental organizations and civil society.</p>
+              <p>1. Legal minds are a group of advocates and auditors. Proficientness, experience, creativity, and integrity are the personas that we bring to every matter we handle. Through our knowledge, experience, and expertise, we offer our clients the most efficient, strategic, and cost-effective representation in everything from the simplest to the most complex civil litigation.</p>
+              <p>2. We ranked it highly for its client-satisfaction ethos. The firm takes great pride in its client servicing approach focused on clarity, accessibility, high responsiveness, and business-oriented legal advice.</p>
+              <p>3. We represent clients in all Indian and international courts in a wide variety of matters, including criminal, civil, and corporate litigation, taxation, immigration, property title verification, legal opinion, product liability, construction defect, breach of contract, professional liability, employment litigation, insurance coverage, and paralegal trainings for developmental organizations and civil society.</p>
             </div>
           </div>
 
