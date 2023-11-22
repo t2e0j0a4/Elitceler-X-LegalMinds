@@ -267,21 +267,57 @@
 .section2__main {
     margin: 2rem auto;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     background-color: var(--c-p);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 
-.section2__main img {
-    width: 45%;
+.img__load {
+    height: 100%;
+    background-image: url('../../assets/homeAbout-Small.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+}
+
+.img__load::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    z-index: -1;
+    animation: pulse 2.5s infinite;
+    background-color: white;
+}
+
+@keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.img__load img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.img__load img.img__loaded {
+    opacity: 1;
 }
 
 .section2__about {
-    width: 55%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -293,11 +329,15 @@
 
 .section2__about p {
     width: 100%;
-    height: 100%;
     text-align: left;
     font-size: 0.9rem;
     font-family: var(--f-p);
     margin: auto;
+}
+
+.section2__about p::first-letter {
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 /* Section 2 - About Us */
@@ -837,23 +877,21 @@
     /* Section 2 - About Us */
 
     .section2__main {
-        width: 100%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
-    .section2__main img {
+    
+    .img__load {
         width: 100%;
-        object-fit: cover;
+        height: auto;
+        aspect-ratio: 1;
     }
 
     .section2__about {
         width: 100%;
         padding: 2rem 1rem;
-    }
-
-    .section2__about p {
-        text-align: center;
     }
 
     /* Section 2 - About Us */
@@ -965,7 +1003,7 @@
     }
 
     .section2__about p {
-        font-size: 15px;
+        font-size: 0.9rem;
     }
 
     /* Section 2 - About Us */
