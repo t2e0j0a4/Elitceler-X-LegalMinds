@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from "./Home.module.css";
 import About from "../../assets/homeAbout.svg";
+import Hero from "../../assets/Hero.jpeg";
 
 // React Icons
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -21,8 +22,10 @@ const Home = () => {
   const { app__home, home__section1, section1__overlay, section1__center, section1__subhead, section1__services, some__popular, section1__cta, service__icon, home__section2, section2__center, section2__main, img__load, img__loaded, section2__about, home__section4, section4__center, why__us, services, all__services, each__service, home__section5, section5__center, all__faqs, each__faq, faq__question, faq__answer, open__answer, home__section7, section7__center, section7__main, each__member, member__details, member__socials } = styles;
 
   // Image Loading
-  const imgRef = useRef<HTMLImageElement>(null);
-  const [imgLoaded, setImageLoaded] = useState<boolean>(false);
+  const imgAboutRef = useRef<HTMLImageElement>(null);
+  const [aboutImgLoaded, setAboutImageLoaded] = useState<boolean>(false);
+  const imgHeroRef = useRef<HTMLImageElement>(null);
+  const [heroImgLoaded, setHeroImageLoaded] = useState<boolean>(false);
 
   const [ currentFAQ, setCurrentFAQ ] = useState<number>(1);
 
@@ -31,8 +34,9 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    imgRef.current?.complete && setImageLoaded(true);
-  }, [imgRef]);
+    imgAboutRef.current?.complete && setAboutImageLoaded(true);
+    imgHeroRef.current?.complete && setHeroImageLoaded(true);
+  }, [imgAboutRef, imgHeroRef]);
 
 
   return (
@@ -41,6 +45,7 @@ const Home = () => {
       {/* Section 1 - Search Service */}
 
       <section className={home__section1}>
+        <img src={Hero} className={`${heroImgLoaded && img__loaded}`} alt="Banner" ref={imgHeroRef} onLoad={() => {setHeroImageLoaded(true)}} />
         <div className={section1__overlay}/>
         <div className={section1__center}>
 
@@ -82,7 +87,7 @@ const Home = () => {
 
           <div className={section2__main}>
             <div className={img__load}>
-              <img src={About} className={`${imgLoaded && img__loaded}`} alt="Legal Minds" ref={imgRef} onLoad={() => {setImageLoaded(true)}} />
+              <img src={About} className={`${aboutImgLoaded && img__loaded}`} alt="Legal Minds" ref={imgAboutRef} onLoad={() => {setAboutImageLoaded(true)}} />
             </div>
             <div className={section2__about}>
               <p>1. Legal minds are a group of advocates and auditors. Proficientness, experience, creativity, and integrity are the personas that we bring to every matter we handle. Through our knowledge, experience, and expertise, we offer our clients the most efficient, strategic, and cost-effective representation in everything from the simplest to the most complex civil litigation.</p>
